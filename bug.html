@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to access a non-existent attribute
+    let myVar = document.getElementById('myDiv').getAttribute('nonExistentAttribute');
+    console.log(myVar); // Output: null
+    // Correct way to handle potentially missing attributes
+    let myDiv = document.getElementById('myDiv');
+    let myAttribute = myDiv.getAttribute('data-custom-attribute') || 'default value'; 
+    console.log(myAttribute);
+  </script>
+</body>
+</html>
