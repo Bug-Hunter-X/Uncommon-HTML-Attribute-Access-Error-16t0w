@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv" data-custom-attribute="Custom Value">
+    This is some text.
+  </div>
+  <script>
+    let myDiv = document.getElementById('myDiv');
+    let myAttribute = myDiv.getAttribute('data-custom-attribute') || 'default value';
+    console.log(myAttribute); // Output: Custom Value
+    // Testing with a non-existent attribute
+    let nonExistent = myDiv.getAttribute('nonExistentAttribute') || 'default value';
+    console.log(nonExistent); // Output: default value
+  </script>
+</body>
+</html>
